@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "final-pipeline-stage3-env"
+version = "0.1.0"
+description = "Python dependency spec for final_pipeline Stage 3 QM/MM descriptor calculation (vlx-master env)."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "veloxchem",
+  "numpy",
+]
+
+

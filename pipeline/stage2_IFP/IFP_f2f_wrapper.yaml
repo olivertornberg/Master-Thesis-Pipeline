@@ -1,0 +1,49 @@
+name: IFP
+
+nodes:
+- name: loadlibrary  
+  type: LoadLibrary
+- name: ifpidv
+  type: IFPidv
+- name: savesinglelibrary
+  type: SaveSingleLibrary
+
+
+channels:
+- sending:
+    loadlibrary: out
+  receiving:
+    ifpidv: inp
+- sending:
+    ifpidv: out
+  receiving:
+    savesinglelibrary: inp
+
+
+parameters:
+  - name: input
+    map:
+      - loadlibrary: path
+
+  - name: output
+    map:
+      - savesinglelibrary: file
+
+  - name: receptor
+    map:
+      - ifpidv: inp_rec
+
+  - name: metadata
+    value: True
+    map:
+      - ifpidv: metadata
+
+  - name: interaction
+    value: ['HBAcceptor', 'HBDonor', 'Cationic', 'PiCation', 'PiStacking']
+    map:
+      - ifpidv: interaction_type
+
+  - name: cutoff
+    value: 4.0
+    map:
+      - ifpidv: cutoff

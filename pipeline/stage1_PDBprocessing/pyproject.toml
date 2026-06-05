@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "final-pipeline-stage1-env"
+version = "0.1.0"
+description = "Python dependency spec for final_pipeline Stage 1 PDB processing (gromacs-env)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy==2.4.4",
+  "mdanalysis==2.10.0",
+  "rdkit==2026.03.3",
+  "biopython==1.87",
+]
+
+# NOTE: GROMACS (gmx binary, version 2026.0) is also required and installed via conda:
+# conda install -c conda-forge gromacs=2026.0
+# It is used between Stage 1 cells for hydrogen addition and energy minimisation.
+
+[tool.pytest.ini_options]
+addopts = "-q"

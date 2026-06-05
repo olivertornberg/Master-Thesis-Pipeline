@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "final-pipeline-ifp-env"
+version = "0.1.0"
+description = "Reusable Python dependency spec for final_pipeline stage2 IFP (maize workflow)."
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "maize==0.9.1",
+  "maize-contrib==0.7.7",
+  "biopython==1.86",
+  "numpy==1.26.4",
+  "pandas==2.3.3",
+  "scipy==1.15.2",
+  "scikit-learn==1.7.2",
+  "networkx==3.4.2",
+  "matplotlib==3.10.8",
+  "seaborn==0.13.2",
+  "mdanalysis==2.9.0",
+  "prolif==2.1.0",
+  "rdkit==2025.09.5",
+  "openbabel==3.1.1",
+  "meeko==0.7.1",
+  "pyyaml==6.0.3",
+  "tqdm==4.67.3",
+  "requests==2.32.5",
+  "sqlalchemy==2.0.47",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==9.0.2",
+  "pytest-mock==3.15.1",
+  "pytest-datadir==1.8.0",
+  "mypy==1.6.1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
