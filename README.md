@@ -1,6 +1,6 @@
 # Master-Thesis-Pipeline
 
-![Alternative text](pipeline_schematic.png)
+![Alternative text](Schematic.png)
 
 A QM/MM pipeline for high-throughput generation of enzyme-substrate quantum mechanical descriptors and active-site characterization, developed as a master's thesis project in collaboration between KTH and AstraZeneca.
 
